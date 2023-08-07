@@ -150,9 +150,7 @@ body {
     color: var(--black);
     font-size: 1.6rem;
     line-height: 1.5;
-    height: 200vh;
 }
-
 
 :focus-visible {outline-offset: 4px;}
 
@@ -175,7 +173,47 @@ body {
 .container {padding-inline: 15px;}
 
 
+.section {
+    padding-block: var(--section-padding);
+}
 
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1,
+h2,
+h3 { line-height: 1.1;}
+
+
+h1 {
+    color: var(--white);
+    font-family: var(--ff-bangers);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-400);
+    letter-spacing: 1px;
+}
+
+
+h2,
+h3 {color: var(--eerie-black);}
+
+
+.h2 {font-size: var(--fs-2);}
+
+.h3 {font-size: var(--fs-3);}
+
+.btn {
+    background-color: var(--black);
+    color: var(--white);
+    max-width: max-content;
+    padding: 8px 25px;
+    border-radius: 50px;
+    transition: var(--transition-1);
+    font-weight: var(--fw-700);
+}
 
 
 
@@ -291,13 +329,12 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 10px 15px;
+    padding: 15px;
     background-color: var(--sonic-silver);
     color: var(--white);
     font-weight: var(--fw-700);
     text-transform: uppercase;
     text-align: center;
-    border-radius: var(--radius-4);
 
 }
 
@@ -310,9 +347,24 @@ body {
 \*----------------------------------------------------------------------*/
 
 
+.hero {
+    margin-block-start: 85px;
+    min-height: 360px;
+    background-position: left;
+    display: grid;
+    text-align: center;
+}
 
+.hero-title .span{ font-size: .5em;}
 
+.hero-text {
+    color: var(--white);
+    margin-block: 15px 25px;
+}
 
+.hero .btn { margin-inline: auto;}
+
+.hero .btn:is(:hover, :focus) {background-color: var(--portland-orange);}
 
 
 /*----------------------------------------------------------------------*\
