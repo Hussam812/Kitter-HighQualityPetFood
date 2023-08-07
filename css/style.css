@@ -554,6 +554,33 @@ h3 {color: var(--eerie-black);}
 
 
 
+.service .img {
+    margin-inline: auto;
+    margin-block-end: 30px;
+}
+.service .section-title { margin-block-end: 60px;}
+
+.service-card {text-align: center;}
+
+.service-card .card-icon {
+    max-width: max-content;
+    margin-inline: auto;
+}
+
+
+.service-card .card-title { margin-block: 10px;}
+
+.service-card .card-text {color: var(--spanish-gray);}
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------------------------------------*\
 
                              # CTA
