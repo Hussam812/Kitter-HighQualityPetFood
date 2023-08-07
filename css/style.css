@@ -612,18 +612,22 @@ h3 {color: var(--eerie-black);}
 
 
 
+.brand  {--section-padding: 100px}
+
+ .brand .has-scrollbar {gap: 0;}
 
 
 
+.brand .scrollbar-item {min-width: 50%;}
 
 
 
+.brand .scrollbar-item:not(:last-child) { border-inline-end: 1px solid var(--platinum);}
 
-
-
-
-
-
+.brand-card {
+    max-width: max-content;
+    margin-inline: auto;
+}
 
 
 
