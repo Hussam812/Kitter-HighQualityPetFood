@@ -646,8 +646,7 @@ h3 {color: var(--eerie-black);}
 
 
 .footer-top .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 30px;
 }
 
@@ -755,8 +754,367 @@ h3 {color: var(--eerie-black);}
 
 /*----------------------------------------------------------------------*\
 
-             # MEDIA QUIERIS 
+                         # MEDIA QUIERIS 
 
 \*----------------------------------------------------------------------*/
 
 
+/**
+    * Responsive for lage than 575px screen
+**/
+
+@media (min-width: 575px){
+    /**
+        *CUSTOM PROPERTY
+    **/
+    :root {
+        /**
+            *TYPOGRAPY
+        **/
+        --fs-2: 4rem;
+        --fs-3: 2.6rem;
+    }
+
+    /**
+        *REUSED STYLE
+    **/
+
+
+    .scrollbar-item {min-width: calc(50% - 15px); }
+    .grid-list {grid-template-columns: 1fr 1fr;}
+
+    /**
+        *   HERO
+    **/
+    .hero {
+        padding-inline-start: 20px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /**
+        *   OFFERS
+    **/
+
+    .offer .grid-list {grid-template-columns: 1fr;}
+
+    /**
+        *   PRODUCT
+    **/
+
+    .product-card .card-banner {position: relative;}
+
+    .product-card .card-action-btn,
+    .product-card .card-banner .hover {
+        display: block;
+        position: absolute;
+    }
+
+    
+    .product-card .card-banner .hover {
+        top: 0;
+        left: 0;
+    }
+
+    .product-card:is(:hover, :focus-within) .default,
+    .product-card .hover {
+        opacity: 0;
+    }
+
+
+    .product-card .default,
+    .product-card:is(:hover, :focus-within) .hover{
+        opacity: 1;
+    }
+
+    .product-card .card-action-btn {
+        top: 15px;
+        right: 15px;
+        color: var(--eerie-black);
+        font-size: 20px;
+        background-color: var(--white);
+        border: 1px solid --platinum;
+        padding: 12px;
+        border-radius: 50%;
+        transition: var(--transition-1);
+        opacity: 0;
+    }
+    .product-card:is(:hover, :focus) .card-action-btn {
+        background-color: var(--portland-orange);
+        border-color: var(--portland-orange);
+        color: var(--white);
+    }
+    .product-card:is(:hover, :focus-within) .card-action-btn {
+        opacity: 1;
+    }
+                    
+    .cta .img {
+        width: 250px;
+    }
+
+    .cta .h2 { --fs-2: 3.2rem}
+
+    /**
+        *   BRAND
+    **/
+
+    .brand .scrollbar-item {min-width: 25%; }
+    .brand .has-scrollbar {margin-block-end: 50px;}
+    /**
+        *   FOOTER
+    **/
+
+    .footer-top .container {grid-template-columns: 1fr 1fr;}
+
+
+
+}
+
+
+
+
+/**
+    * Responsive for lage than 768ox screen
+**/
+
+
+@media (min-width: 768px) {
+    /**
+        *CUSTOM PROPERTY
+    **/
+    :root {
+        /**
+            *TYPOGRAPY
+        **/
+        --fs-1: 9rem;
+        
+    }
+
+    /**
+        *REUSED STYLE
+    **/
+
+
+    .scrollbar-item {min-width: calc(33.33% - 20px); }
+    .grid-list {grid-template-columns: repeat(3, 1fr);}
+
+    /**
+        *   HERO
+    **/
+    .hero {
+        aspect-ratio: 1512 / 764;
+        padding-block-start: 10%;
+    }
+    .hero-text { font-size: 2.4rem;}
+    .offer .grid-list {grid-template-columns: repeat(3, 1fr);}
+
+    
+  /**
+   * CTA
+   */
+
+  .cta-banner { display: block; }
+
+  .cta .container {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    align-items: flex-end;
+
+  }
+
+
+   /**
+   * FOOTER
+   */
+
+   .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } 
+}
+
+
+/**
+ * responsive for large than 992px screen
+ */
+
+ @media (min-width: 992px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-1: 12rem;
+      --fs-3: 3rem;
+  
+      /**
+       * spacing
+       */
+  
+      --section-padding: 50px;
+  
+    }
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container { padding-inline: 30px; }
+  
+    .scrollbar-item { min-width: calc(20% - 24px); }
+  
+  
+  
+    /**
+     * HEADER
+     */
+  
+    .nav-toggle-btn,
+    .nav-action-btn { display: none; }
+  
+    .header {
+      --color: var(--white);
+      background: none;
+    }
+  
+    .header.active {
+      --color: var(--black);
+      background-color: var(--white);
+    }
+  
+    .header .logo,
+    .header .action-btn { color: var(--color);}
+  
+    .header .action-btn.user { display: block;}
+  
+    .logo { font-size: 3.8rem; }
+  
+    .navbar,
+    .navbar.active {
+      all: unset;
+      margin-inline-end: auto;
+    }
+  
+    .navbar-list {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .navbar-link {
+      color: var(--color);
+      --fs-6: 1.7rem;
+      font-weight: var(--fw-700);
+      transition: var(--transition-1);
+    }
+  
+    .header.active .navbar-link:is(:hover, :focus) { color: var(--portland-orange); }
+  
+  
+  
+    /**
+     * HERO
+     */
+  
+    .hero { margin-block-start: 0; }
+  
+  
+  
+    /**
+     * CATEGORY
+     */
+  
+    .category-card .h3 { --fs-3: 2rem; }
+  
+  
+  
+    /**
+     * SERVICE
+     */
+  
+    .service .grid-list { grid-template-columns: repeat(4, 1fr); }
+  
+    .service-card .h3 { --fs-3: 2.4rem; }
+  
+  
+  
+    /**
+     * BRAND
+     */
+  
+    .brand .scrollbar-item { min-width: 20%; }
+  
+  
+  
+    /**
+     * FOOTER
+     */
+  
+    .footer-top .container { grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
+  
+  }
+  
+  
+  
+  
+  
+  /**
+   * responsive for large than 1200px screen
+   */
+  
+  @media (min-width: 1200px) {
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-1: 15rem;
+      --fs-3: 3.2rem;
+  
+    }
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .grid-list { grid-template-columns: repeat(4, 1fr); }
+  
+  
+  
+    /**
+     * CTA
+     */
+  
+    .cta-content { padding-block: 100px; }
+  
+  
+  
+    /**
+     * BRAND, FOOTER
+     */
+  
+    :is(.brand, .footer) .container {
+      max-width: 1200px;
+      width: 100%;
+      margin-inline: auto;
+    }
+  
+    .footer { padding-block-start: 40px; }
+  
+  }
