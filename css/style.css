@@ -602,8 +602,6 @@ h3 {color: var(--eerie-black);}
 
 
 
-
-
 /*----------------------------------------------------------------------*\
 
                              # BRAND
@@ -616,11 +614,7 @@ h3 {color: var(--eerie-black);}
 
  .brand .has-scrollbar {gap: 0;}
 
-
-
 .brand .scrollbar-item {min-width: 50%;}
-
-
 
 .brand .scrollbar-item:not(:last-child) { border-inline-end: 1px solid var(--platinum);}
 
@@ -631,26 +625,102 @@ h3 {color: var(--eerie-black);}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------*\
 
                              # Footer
 
 \*----------------------------------------------------------------------*/
 
+.footer {
+    background-color: var(--raisin-black);
+    color: var(--battleship-gray);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+
+.footer-top {
+    padding-block-start: 100px;
+    border-block-end: 1px solid var(--onyx);
+}
+
+
+.footer-top .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer .logo {
+    color: var(--white);
+    margin-block-end: 10px;
+}
+
+.footer-text {
+    font-size: var(--fs-6);
+    margin-block-end: 25px;
+}
+.footer-text .link {
+    display: inline-block;
+    color: var(--portland-orange);
+} 
+
+.conatct-item {
+    margin-block-end: 15px;
+    color: var(--white);
+    font-weight: var(--fw-700);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.conatct-item ion-icon {
+    flex-shrink: 0;
+    font-size: 22px;
+    color: var(--portland-orange);
+}
+
+.social-list {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 12px;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus) {
+    color: var(--white);
+    background-color: var(--portland-orange);
+}
+
+.footer-list-title {
+    color: var(--white);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-700);
+    padding-block: 10px;
+}
+.footer-link {
+    padding-block: 4px;
+    transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus) {color: var(--portland-orange);}
+
+.footer-bottom { padding: 20px;}
+
+.copyright {margin-block-end: 10px;}
+
+.copyright-link {display: inline-block;}
+
+.footer-bottom .img {
+    width: 100%;
+    max-width: max-content;
+}
 
 
 
