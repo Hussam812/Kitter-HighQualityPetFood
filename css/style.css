@@ -215,6 +215,68 @@ h3 {color: var(--eerie-black);}
     font-weight: var(--fw-700);
 }
 
+.section-title {
+    text-align: center;
+    margin-block-end: 30px;
+}
+
+.section-title .span {
+    display: inline;
+    color: var(--portland-orange);
+}
+.img-holder {
+    aspect-ratio: var(--width) / var(--height);
+    background-color: var(--light-gray);
+    overflow: hidden;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.has-scrollbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: inline mandatory;
+    padding-block-end: 20px;
+    margin-block-end: -20px;
+
+}
+
+
+.scrollbar-item {
+    min-width: 100%;
+    scroll-snap-align: start;
+
+}
+
+.has-scrollbar::-webkit-scrollbar {height: 10px;}
+
+
+.has-scrollbar::-webkit-scrollbar-track {
+    outline: 2px solid var(--portland-orange);
+    border-radius: var(--radius-10);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-10);
+    background-color: var(--portland-orange);
+    border: 2px solid var(--white);
+
+}
+.has-scrollbar::-webkit-scrollbar-button {width: calc(25% - 30px);}
+
+
+
+
+
+
+
 
 
 /*----------------------------------------------------------------------*\
@@ -370,6 +432,44 @@ h3 {color: var(--eerie-black);}
 /*----------------------------------------------------------------------*\
 
                              # CATEGORIEY
+
+\*----------------------------------------------------------------------*/
+
+
+.category-card .card-banner{ border-radius: var(--radius-10);}
+
+
+.category-card .img-cover {transition: var(--transition-2);}
+
+
+.category-card:is(:hover, :focus-within) .img-cover{ transform: scale(1.1);}
+
+.category-card .card-title {
+    text-align: center;
+    margin-block-start: 15px;
+    transition: var(--transition-1);
+}
+
+.category-card .card-title:is(:hover, :focus) { color: var(--portland-orange);}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------*\
+
+                             # OFFERS
+
+\*----------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------*\
+
+                             # OFFERS
 
 \*----------------------------------------------------------------------*/
 
