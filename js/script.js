@@ -42,11 +42,15 @@ addEventOnElement(navbarLinks, "click", closeNavbar);
     * ACTIVE  HEADER ON SCROLl
 */
 const header = document.querySelector("[data-header]");
+const backToTop = document.querySelector("[data-back-top-btn]")
 const activeElementOnScroll = () => {
     if ( window.scrollY > 100){
         header.classList.add("active");
+        backToTop.classList.add("active");
     } else {
         header.classList.remove("active");
+        backToTop.classList.remove("active");
+
     }
 };
 

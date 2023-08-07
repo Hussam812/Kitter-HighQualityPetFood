@@ -723,6 +723,35 @@ h3 {color: var(--eerie-black);}
 }
 
 
+/*----------------------------------------------------------------------*\
+
+             # BACK TO TOP BTN 
+
+\*----------------------------------------------------------------------*/
+
+
+.back-top-btn {
+    position: fixed;
+    bottom: 10px;right: 20px;
+    background-color: var(--portland-orange);
+    color: var(--white);
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-2);
+    opacity: 0;
+    visibility: hidden;
+    transform: var(--transition-1);
+    z-index: 4;
+}
+
+.back-top-btn.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+
 
 /*----------------------------------------------------------------------*\
 
