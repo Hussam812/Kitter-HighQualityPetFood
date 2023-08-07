@@ -224,6 +224,8 @@ h3 {color: var(--eerie-black);}
     display: inline;
     color: var(--portland-orange);
 }
+
+
 .img-holder {
     aspect-ratio: var(--width) / var(--height);
     background-color: var(--light-gray);
@@ -273,7 +275,11 @@ h3 {color: var(--eerie-black);}
 
 
 
+.grid-list {
+    display: grid;
+    gap: 30px;
 
+}
 
 
 
@@ -453,11 +459,6 @@ h3 {color: var(--eerie-black);}
 .category-card .card-title:is(:hover, :focus) { color: var(--portland-orange);}
 
 
-
-
-
-
-
 /*----------------------------------------------------------------------*\
 
                              # OFFERS
@@ -465,6 +466,29 @@ h3 {color: var(--eerie-black);}
 \*----------------------------------------------------------------------*/
 
 
+
+.offer-card {
+    border-radius: var(--radius-10);
+    padding: 20px;
+    display: grid;
+    align-items: center;
+}
+
+.offer-card .card-subtitle {
+    font-size: var(--fs-7);
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+}
+
+
+.offer-card .card-title {
+    color: var(--black);
+    margin-block: 5px 24px;
+}
+
+.offer-card .btn { background-color: var(--portland-orange);}
+
+.offer-card .btn.btn:is(:hover, :focus) { background-color: var(--black);}
 
 
 /*----------------------------------------------------------------------*\
